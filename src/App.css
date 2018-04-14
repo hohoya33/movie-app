@@ -1,11 +1,11 @@
 .App {
-    padding: 50px;
+    padding:50px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size:14px;
 }
-.App__Loading {
+.App__loading{
     display: flex;
     justify-content: center;
     align-items: center;
