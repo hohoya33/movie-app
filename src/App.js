@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Movie from './Movie';
 
-
-
 class App extends Component {
     //Render: componentWillMount() -> render() -> componentDidMount()
     //Update: componentWillReceiveProps() -> shouldComponetUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
@@ -18,16 +16,17 @@ class App extends Component {
     }
     _callApi = () => {
         //'http://api.themoviedb.org/3/movie/550?api_key=65e043c24785898be00b4abc12fcdaae'
-        return fetch('https://yts.ag/api/v2/list_movies.json?sort_by=rating')
+        return fetch('https://yts.am/api/v2/list_movies.json?sort_by=rating')
         .then(response => response.json())
         .then(json => json.data.movies)
         .catch(err => console.log(err))
     }
     _getMovies = async () => {
-        const movies = await this._callApi()
+        const movies = await this._callApi();
+
         this.setState({
             movies
-        })
+        });
     }
     _renderMovies = () => {
         return this.state.movies.map((movie) => {

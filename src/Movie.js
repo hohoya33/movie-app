@@ -20,7 +20,6 @@ import './Movie.css';
     );
   }
 }*/
-
 function Movie({title, poster, genres, synopsis}){
   return (
       <div className="Movie">
@@ -42,13 +41,11 @@ function Movie({title, poster, genres, synopsis}){
   );
 }
 
-
 function MovieGenre({genre}) {
   return (
      <span className="Movie__genre">{genre}</span>
   )
 }
-
 
 /*
 class MoviePoster extends Component {
@@ -70,8 +67,6 @@ function MoviePoster({poster, alt}) {
   )
 }
 
-
-
 Movie.propTypes = {
   title: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
@@ -87,6 +82,5 @@ MoviePoster.propTypes = {
 MovieGenre.propTypes = {
   genre: PropTypes.string.isRequired
 }
-
 
 export default Movie;
